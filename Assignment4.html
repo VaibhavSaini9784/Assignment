@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment4</title>
+</head>
+<body>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <select name="" id="select">
+        <option value="ADD">ADD</option>
+        <option value="MINUS">MINUS</option>
+        <option value="MUL">MUL</option>
+        <option value="DIVIDE">DIVIDE</option>
+    </select>
+    <script>
+        document.getElementById("select").oninput = function(){
+            let op = document.getElementById("select").value
+            let val1 = document.querySelector("#input1").value
+            let val2 = document.querySelector("#input2").value
+            console.log(op)
+            let ans = 0
+            if(op == "ADD"){
+                 ans = Number(val1)+Number(val2)
+            }
+            if(op == "MINUS"){
+                 ans = Number(val1)-Number(val2)
+            }
+            if(op == "MUL"){
+                 ans = Number(val1)*Number(val2)
+            }
+            if(op == "DIVIDE"){
+                 ans = Number(val1)/Number(val2)
+            }
+            // let ans = (val1+val2)
+            console.log(ans)
+
+        }
+    </script>
+</body>
+</html>

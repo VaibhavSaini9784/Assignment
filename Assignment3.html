@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment3</title>
+    <style>
+         #box1{
+            height: 200px;
+            width: 400px;
+            border: 2px solid green;
+            text-align: top;
+            display: block;
+        }
+        .box2{
+            height: 300px;
+            width: 800px;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <textarea name="" id="box1"></textarea>
+       <input type="text" placeholder="color" id="col">
+       <input type="text" placeholder="background-color" id="bcol">
+       <input type="number" placeholder="font-size" id="fs">
+       <input type="number" placeholder="stringlength" id="st">
+    <div class="box2" id="b2">
+
+        <p id="p2"></p>
+    </div>
+    <script>
+        document.getElementById("box1").oninput=function(){
+            let h=document.getElementById("box1").value
+            console.log(h)
+            document.getElementById("p2").innerHTML=h
+            document.getElementById("st").value = h.length
+        }
+        document.getElementById("col").oninput=function(){
+            let a=document.getElementById("col").value
+            document.getElementById("p2").style.color=a
+        }
+        document.getElementById("bcol").oninput=function(){
+            let b=document.getElementById("bcol").value
+            document.getElementById("b2").style.backgroundColor=b
+        }
+        document.getElementById("fs").oninput=function(){
+            let c=document.getElementById("fs").value
+            document.getElementById("b2").style.fontSize=c+"px"
+        }
+       
+    </script>
+</body>
+</html>

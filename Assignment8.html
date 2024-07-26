@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile_card</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            background-color:aliceblue;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .left{
+            width: 50%;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        .row{
+            display: flex;
+            margin: 10px;
+        }
+        h4{
+            width: 25%;
+            padding-top: 10px;
+        }
+        input{
+            width: 75%;
+            padding: 10px;
+        }
+        .right{
+            border: 1px solid black;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            padding: 22px;
+        }
+        .profile{
+            height: 235px;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .info{
+            width: 70%;
+            padding: 20px 0;
+        }
+        .photo{
+            height: 100%;
+            width: 100%;
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+        .copy{
+            width: 76%; 
+            padding-left: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="row">
+                <h4>IMAGE: </h4>
+                <input type="text" class="img" id="img">
+            </div>
+            <div class="row">
+                <h4>NAME: </h4>
+                <input type="text" class="name" id="name">
+            </div>
+            <div class="row">
+                <h4>EMAIL:</h4>
+                <input type="email" class="email" id="email">                
+            </div>
+            <div class="row">
+                <h4>COURSE:</h4>
+                <input type="text" class="course" id="course">                
+            </div>
+            <div class="row">
+                <h4>MOBILE:</h4>
+            <input type="text" class="mobile" id="mobile">
+            </div>
+        </div>
+        <div class="right">
+            <div class="profile">
+                <div class="photo" id="photo"></div>
+            </div>
+            <div class="info">
+                <div class="row">name: <div class="copy" id="content"></div></div>
+                <div class="row">email: <div class="copy" id="share"></div></div>
+                <div class="row">course: <div class="copy" id="study"></div></div>
+                <div class="row">mobile: <div class="copy" id="phone"></div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+         document.getElementById("name").oninput = function(){
+            let value = document.getElementById('name').value;
+            // document.getElementById('content').textContent=value; //to add the value on the div
+            document.getElementById('content').innerText= value
+        }
+        document.getElementById("email").oninput = function(){
+            let value = document.getElementById('email').value;
+            // document.getElementById('content').textContent=value; //to add the value on the div
+            document.getElementById('share').innerText= value
+        }
+        document.getElementById("course").oninput = function(){
+            let value = document.getElementById('course').value;
+            // document.getElementById('content').textContent=value; //to add the value on the div
+            document.getElementById('study').innerText= value
+        }
+        document.getElementById("mobile").oninput = function(){
+            let value = document.getElementById('mobile').value;
+            // document.getElementById('content').textContent=value; //to add the value on the div
+            document.getElementById('phone').innerText= value
+        }
+        document.getElementById("img").oninput = function(){
+            let value = document.getElementById('img').value;
+            document.getElementById("photo").style.backgroundImage = url('${value}');
+            document.getElementById("photo").style.backgroundSize = 'cover';
+        }
+    </script>
+</body>
+</html>

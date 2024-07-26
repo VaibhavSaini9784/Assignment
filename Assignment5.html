@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment5</title>
+    <style>
+        #red {
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            background-color: red;
+            border: 2px solid black;
+            display: inline-block;
+
+        }
+
+        #green {
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            background-color: green;
+            border: 2px solid black;
+            display: inline-block;
+        }
+
+        #yellow {
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            background-color: yellow;
+            border: 2px solid black;
+            display: inline-block;
+
+        }
+
+        #black {
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            background-color: black;
+            border: 2px solid black;
+            display: inline-block;
+        }
+
+        select {
+            display: flex;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main{
+            height: 80vh;
+            width: 40vw;
+            border: 1px solid black;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body id="bodyy">
+    <div class="main">
+        <h2 style="font-size: 35px;">Enter your domain</h2>
+        <select name="" id="se" style="width: 250px;">
+            <option value="">Make your choice</option>
+            <option value="rea" id="re">React</option>
+            <option value="dja" id="dj">Django</option>
+            <option value="aws" id="aw">AWS</option>
+            <option value="sql" id="sq">SQL</option>
+        </select>
+        <div id="red"></div>
+        <div id="green"></div>
+        <div id="yellow"></div>
+        <div id="black"></div>
+        <p id="par"></p>
+        <button id="up">uppercase</button>
+        <button id="low">lowercase</button>
+        <button id="plus">+</button>
+        <button id="minus">-</button>
+    </div>
+    <script>
+        document.getElementById("se").onclick = function () {
+            let x = document.getElementById("se").value;
+            console.log(x)
+
+            if (x == "rea") {
+                document.getElementById("par").innerText = "ybcfgyuegvsy  yugceufryu rgugfuercbgfug uguhgfuyegvfu uyfguegfr buebgugvuhsuhfgv uebv uguydgfy berjhcbdyu vgrejwhfg idhgijehf jdjvbribjhfgughdviuhfbvdfhvjbuhvirhibiuerhfuierhf eufrg eh fger hfur efhvugyeruerwy"
+            }
+            if (x == "dja") {
+                document.getElementById("par").innerText = "ybcfgyuegvsy  yugceufryu rgugfuercbgfug uguhgfuyegvfu uyfguegfr buebgugvuhsuhfgv uebv uguydgfy berjhcbdyu vgrejwhfg idhgijehf jdjvbribjhfgughdviuhfbvdfhvjbuhvirhibiuerhfuierhf eufrg eh fger hfur efhvugyeruerwy"
+            }
+            if (x == "aws") {
+                document.getElementById("par").innerText = "ybcfgyuegvsy  yugceufryu rgugfuercbgfug uguhgfuyegvfu uyfguegfr buebgugvuhsuhfgv uebv uguydgfy berjhcbdyu vgrejwhfg idhgijehf jdjvbribjhfgughdviuhfbvdfhvjbuhvirhibiuerhfuierhf eufrg eh fger hfur efhvugyeruerwy"
+            }
+            if (x == "sql") {
+                document.getElementById("par").innerText = "ybcfgyuegvsy  yugceufryu rgugfuercbgfug uguhgfuyegvfu uyfguegfr buebgugvuhsuhfgv uebv uguydgfy berjhcbdyu vgrejwhfg idhgijehf jdjvbribjhfgughdviuhfbvdfhvjbuhvirhibiuerhfuierhf eufrg eh fger hfur efhvugyeruerwy"
+            }
+        }
+        document.getElementById("red").onclick = function () {
+            document.getElementById("bodyy").style.backgroundColor="red"
+        }
+        document.getElementById("green").onclick = function () {
+            document.getElementById("bodyy").style.backgroundColor="green"
+        }
+        document.getElementById("yellow").onclick = function () {
+            document.getElementById("bodyy").style.backgroundColor="yellow"
+        }
+        document.getElementById("black").onclick = function () {
+            document.getElementById("bodyy").style.backgroundColor="black"
+        }
+        document.getElementById("up").onclick=function(){
+            document.getElementById("par").style.textTransform="uppercase"
+        }
+        document.getElementById("low").onclick=function(){
+            document.getElementById("par").style.textTransform="lowercase"
+        }
+        let count=15
+        document.getElementById("plus").onclick=function(){
+            count++
+            document.getElementById("par").style.fontSize=count+"px"
+        }
+        document.getElementById("plus").onclick=function(){
+            count++
+            document.getElementById("par").style.fontSize=count+"px"
+        }
+  count1 =  count;
+        document.getElementById("minus").onclick = function () {
+            count1--;
+            console.log(count1 + "px")
+            document.getElementById("par").style.fontSize = count1 + "px"
+        }
+        // let counter = 0;
+        // document.getElementById("up").onclick = function () {
+        //     document.getElementById("par").style.textTransform = "uppercase"
+        // }
+        // document.getElementById("low").onclick = function () {
+        //     document.getElementById("par").style.textTransform = "lowercase"
+        // }
+        // document.getElementById("plus").onclick = function () {
+        //     counter++;
+        //     console.log(counter + "px")
+        //     document.getElementById("par").style.fontSize = 15 + counter + "px"
+        // }
+        // count = 15 + counter;
+        // document.getElementById("minus").onclick = function () {
+        //     count--;
+        //     console.log(count + "px")
+        //     document.getElementById("par").style.fontSize = count + "px"
+        // }
+    </script>
+</body>
+
+</html>

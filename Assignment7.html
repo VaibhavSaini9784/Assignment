@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            height: 40px;
+            width: 200px;
+        }
+        .container{
+            width: 300px;
+            background-color: aliceblue;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <input type="text">
+    <button>Submit</button>
+</div>
+    <script>
+document.querySelector("button").onclick=function(){
+    let val=document.querySelector("input").value
+    let h=document.createElement("li")
+    h.innerHTML=val
+    // h.setAttribute("class","mybox")
+    // h.className="box"
+    document.querySelector(".container").append(h)
+    let a=document.createElement("button")
+    a.innerHTML="Task Completed"
+    document.querySelector(".container").append(a)
+    let b=document.createElement("button")
+    b.innerHTML="Task Completed"
+    document.querySelector(".container").append(b)
+}
+    </script>
+</body>
+</html>
