@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            height: 475px;
+            width: 600px;
+            border: 1px solid black;
+        }
+
+        .main2 {
+            height: 100px;
+            width: 600px;
+            border: 0px;
+            display: flex;
+        }
+
+        .cont1 {
+            height: 90px;
+            width: 455px;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 5px 0px 5px 5px;
+            display: inline-block;
+        }
+
+        .cont2 {
+            height: 90px;
+            width: 124px;
+            color: aliceblue;
+            border: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            margin-left: 0px;
+            margin-top: 5px;
+            background-color: green;
+        }
+
+
+        .box2 {
+            height: 90px;
+            width: 124px;
+            border: 0px;
+            display: inline-block;
+            margin: 0px 0px 3px 0px;
+        }
+
+        .box3 {
+            height: 90px;
+            width: 146px;
+            border: 0px;
+            display: inline-block;
+            margin: 0px 0px 3px 5px;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main2">
+            <input type="text" class="cont1">
+            <button class="cont2" id="but1">C</button>
+        </div>
+        <div class="box3">
+            <div ><button class="cont2" id="but2">1</button></div>
+        </div>
+        <div class="box3">
+            <div ><button  class="cont2" id="but2">2</button></div>
+        </div>
+        <div class="box3">
+            <div ><button  class="cont2" id="but3">3</button></div>
+        </div>
+        <div class="box2">
+            <div ><button class="cont2" id="but4">/</button></div>
+        </div>
+        <div class="box3">
+            <div ><button id="but5" class="cont2">4</button></div>
+        </div>
+        <div class="box3">
+            <div ><button class="cont2" id="but6">5</button></div>
+        </div>
+        <div class="box3">
+            <div ><button class="cont2" id="but7">6</button></div>
+        </div>
+        <div class="box2">
+            <div ><button class="cont2" id="but8">*</button></div>
+        </div>
+        <div class="box3">
+            <div ><button class="cont2" id="but9">7</button></div>
+        </div>
+        <div class="box3">
+            <div ><button class="cont2" id="but10">8</button></div>
+        </div>
+        <div class="box3">
+            <div ><button class="cont2">9</button></div>
+        </div>
+        <div class="box2">
+            <div ><button class="cont2">-</button></div>
+        </div>
+        <div class="box3">
+            <div ><button class="cont2">0</button></div>
+        </div>
+        <div class="box3">
+            <div ><button class="cont2">.</button></div>
+        </div>
+        <div class="box3">
+            <div ><button class="cont2">=</button></div>
+        </div>
+        <div class="box2">
+            <div ><button class="cont2">+</button></div>
+        </div>
+
+    </div>
+    <script>
+        let a=document.querySelectorAll("button")
+        for(let i of a)
+    {
+        i.onclick=function()
+        {
+            console.log(i.innerText)
+            if(i.innerText=="=")
+        {
+            let val=document.querySelector("input").value
+            console.log(eval(val))
+            document.querySelector("input").value=eval(val)
+        }
+        else{
+                document.querySelector("input").value+=i.innerText
+                if(i.innerText=="C")
+                {
+                    document.querySelector("input").value=''
+                }
+        }
+        }
+    }
+    // let btn=document.querySelectorAll("button")
+    // btn.forEach((item)=>{
+    //     item.onclick=function(){
+//             console.log(item.innerText)
+//         }
+//     }
+// )
+    </script>
+</body>
+
+</html>
